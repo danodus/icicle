@@ -1,5 +1,9 @@
 LPF      = boards/$(BOARD).lpf
+ifeq ($(SPEED),6)
+FREQ_PLL = 40
+else
 FREQ_PLL = 80
+endif
 
 progmem_syn.hex:
 	touch $@
