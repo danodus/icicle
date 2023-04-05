@@ -68,8 +68,8 @@ module top (
 
     pll pll (
 `ifdef ECP5
-        .clki(clk),
-        .clko(pll_clk),
+        .clkin(clk),
+        .clkout0(pll_clk),
 `else
         .clock_in(clk),
         .clock_out(pll_clk),
